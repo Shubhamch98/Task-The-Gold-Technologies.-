@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Personal Page</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap">
+  <style>
+    body {
+      background-color: lightblue;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #container {
+      text-align: center;
+      margin: 0 auto;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 20px 50px;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin: 10px 100px;
+    }
+
+    /* Add a CSS class for the hover effect */
+    .hobby-item:hover {
+      background-color: #444;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1 id="name">SHUBHAM CHAUDHARY</h1>
+    <p>
+        Hello, My name is Shubham Chaudhary. I am a recent graduate with a strong passion for Information technology. Throughout my academic journey, I have Completed my Master's in computer Application and I also completed my Bachelor's in computer Application. As a fresher, I am excited to embark on my professional career and apply my knowledge to real-world projects. I'm passionate about various hobbies that keep me busy and entertained during my free time. Here are some of my favorite hobbies:
+    <ul>
+      <li class="hobby-item">Traveling to new destinations and immersing myself in diverse cultures.</li>
+      <li class="hobby-item">Embarking on thrilling trekking adventures, conquering challenging trails and reaching breathtaking summits.</li>
+      <li class="hobby-item">Engaging in outdoor sports Like Cricket.</li>
+      <!-- Add more hobbies as needed -->
+    </ul>
+    <form id="personal-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name-input" name="name" required><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email-input" name="email" required><br>
+      
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone-input" name="phone" required><br>
+      
+      <label for="gender">Gender:</label>
+      <select id="gender-input" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select><br>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    // Click event handler for the name
+    $('#name').click(function() {
+      alert("Hi, I'm [Your Name]. Here's a fun fact about me!");
+    });
+
+    // Form submit event handler
+    $('#personal-form').submit(function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get form values
+      const nameValue = $('#name-input').val();
+      const emailValue = $('#email-input').val();
+      const phoneValue = $('#phone-input').val();
+      const genderValue = $('#gender-input').val();
+
+      // Print form values to the console
+      console.log("Name:", nameValue);
+      console.log("Email:", emailValue);
+      console.log("Phone:", phoneValue);
+      console.log("Gender:", genderValue);
+    });
+  </script>
+</body>
+</html>
